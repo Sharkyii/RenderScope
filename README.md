@@ -217,31 +217,6 @@ Real benchmark measurements on AMD Ryzen 9 270 (16 threads) highlight critical h
    - At 1 thread, AVX2 SIMD achieves **1.4x to 2.2x speedup** over scalar rasterization.
    - At 16 threads, all cores concurrently stream writes to the backbuffer and Z-buffer, shifting the bottleneck from vector compute to L3 cache and memory bus bandwidth.
 
----
-
-## Project Maintainer & Contributions
-
-**Sneh Kansagara**
-- Engineered the RenderScope CPU performance analysis framework.
-- Designed and implemented the tile execution profiler and thermal heatmap overlay.
-- Developed the configurable Scalar vs. AVX2 SIMD rasterization test harness.
-- Built the automated benchmarking engine, statistical aggregation, and CSV exporter.
-- Implemented the automated Python analytical reporting tool and chart generators.
-- Added cross-platform Linux compatibility (CMake, GNU Make, zero-dependency software canvas).
-- Authored the comprehensive documentation and systems performance evaluation.
-
----
-
-## Third-Party Credits & Licensing
-
-- **GamesEngineeringBase:** The windowing and timer platform interface is derived from the MSc Games Engineering Team base header (`GamesEngineeringBase.h`), provided under the [MIT License](https://opensource.org/licenses/MIT):
-  ```
-  Copyright (c) 2024-2025 MSc Games Engineering Team
-  ```
-- **RenderScope:** Licensed under the MIT License.
-
----
-
 ## Future Roadmap
 
 - [ ] **AVX-512 Vector Path:** Add 16-wide packet rasterization for modern CPUs supporting AVX-512.
